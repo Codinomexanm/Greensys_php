@@ -1,0 +1,176 @@
+/*
+CSS BÁSICO DO SISTEMA
+*/
+/* 
+    Created on : 18/05/2014, 20:20:55
+    Author     : diogenes
+*/
+/* LINKS*/
+a{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;     
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+    font-weight:100;
+}
+a:hover { 
+
+    color: #32b42e;
+}
+a:active {
+    text-decoration: none
+}
+a {
+    outline: none;
+}
+/*MAGEM E PREENCHIMENTO 0*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*CORPO DA PÁGINA*/
+body{
+
+    background-color: #e2e2e2;
+    font-family: serif;
+    font-size: 13pt;
+    font-weight:100;
+    color: #000;
+    background-image: url(../images/fundo.jpeg);
+}
+/*CABEÇALHO */
+header{
+    background-color: #ffffff;
+    padding: 7%;
+    background-image: url(../images/GS-06.png);
+    background-repeat: no-repeat;
+    box-shadow: 1px 7px 7px #333;
+
+}
+.usr{
+    position: absolute;
+    top: 1%;
+    left: 44%;
+    width: 20%;
+    font-size: 13pt;
+    color: #32b42e;
+}
+iframe{
+    width: 95%;
+    position: absolute;
+    top: 39%;
+    left: 1%;
+    background-color: #fff;
+    border: solid 1px #CCC;
+    border-radius: 3em 3em 1em 1em;
+    box-shadow: 1px 7px 7px #333;
+
+}
+footer{
+    position: absolute;
+    top: 999px;
+    left: 1%;
+    width: 97%;
+    height: 100px;
+    border: 1px solid #32b42e;
+    border-radius: 1em 1em 1em 1em;
+    background-color: #fff;
+    box-shadow: 1px 1px 7px #333;
+}
+footer p{
+    position: relative;
+    left: 7%;
+    top: 58%;
+    width: 30%;
+    border: solid 1px #000;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-left-style: solid;
+    border-left-color: #32b42e;
+    border-right-color: #32b42e;
+    border-right-style: solid;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+footer p span{
+    color:#fe535b;
+}
+footer a{
+    width: 30%;
+    position: relative;
+    top: 35%;
+    left: 60%;
+    border: solid 1px #000;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-left-color: #32b42e;
+    border-right-color: #32b42e;
+    border-right-style: solid;
+    padding-left: 3%;
+    padding-right: 3%;
+    
+}
+ 
+.menu li, ul{
+    padding: 7px;
+}
+.menu{
+    
+    position: absolute;
+    top: 33px;
+    left: 45%;
+    list-style:none;
+    border:3px solid #32b42e;
+border-radius: 1em 0em 1em 0em;
+    float:left;
+    box-shadow: black 0.5em 0.5em 0.3em
+}
+.menu li{
+    position:relative;
+    float:left;
+    border-right:1px solid #32b42e;
+    color: #333;
+	font-weight: 500;
+border-radius: 1em 0em 1em 0em;
+}
+
+.menu li a{
+color:#333; text-decoration:none; padding:10px 10px ; display:block;
+
+}
+
+.menu li a:hover{
+    background:appworkspace;
+    color:#1C820B;
+    border-radius:8px; /*some css3*/
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	transition:0.2s ease-in-out;
+	box-shadow:2px 2px 3px #000;
+	-moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	-moz-transition:0.2s ease-in-out;
+	-o-transition:0.2s ease-in-out;
+	-webkit-transition:all 0.8s ease-in-out;
+    text-shadow:0px 0px 15px #fff;
+}
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#fff;
+    display:none;
+} 
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;border: 1px solid #000;border-radius: 1em 1em 1em 1em;
+}
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:190px;border-radius: 1em 0em 1em 0em;
+}
+

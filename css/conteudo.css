@@ -1,0 +1,193 @@
+    /*
+FOLHA DE ESTILO EM CASCATA PRO CONTEÚDO DOS IFRAMES
+/* 
+    Created on : 27/05/2014, 20:14:50
+    Author     : diogenes
+*/
+
+/*CABEÇALHO */
+.cadastro{
+    background-color: #ffffff;
+    padding: 7%;
+    background-image: url(../images/GS-06.png);
+    background-repeat: no-repeat;
+      box-shadow: 1px 7px 7px #333;
+      
+}
+h3{
+    font-family: serif;
+    font-size: 20pt;
+    font-weight: 100;
+}
+table{
+    font-family: serif;
+    font-size: 9pt;
+    font-weight: 100;
+}
+hr{
+    color: #32b42e;
+}form{
+    border: solid 2px #32b42e;
+    border-top-style:none;
+    border-radius: 2em 2em 2em 2em;
+}
+.titulo{
+
+    font-family: serif;
+    font-size: 14pt;
+    font-weight: 100;
+    margin: inherit;
+}
+.enviar{
+    width: 50%;
+    color: #000;
+    font-size: 13pt;
+    margin-bottom: 3%;
+}
+.enviar:hover{
+    color: #32b42e;
+    box-shadow: black 0.5em 0.5em 0.3em
+
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+    font-weight:100;
+}
+a:hover { 
+    color: #32b42e;
+}
+a:active {
+    text-decoration: none
+}
+a{
+    outline: none;
+}
+.pesquisar{
+    background:#32b42e;
+        color:#ffffff;
+        margin: 3%;
+        border: 1px solid #32b42e;
+    border-radius: 5em 0em 5em 0em;
+}
+.pesquisar:hover{
+    box-shadow: black 0.5em 0.5em 0.3em
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.autor, .data{
+    
+    background: #32b42e;
+    font-size: 15pt;
+    color: #fff;
+    
+}
+th{
+    
+    background: #32b42e;
+    font-size: 10pt;
+    font-weight: 100;
+    color: #fff;
+}
+.propaganda:link, .propaganda:visited {
+    text-decoration: none;
+    color: #32b42e;
+    font-weight:100;
+}
+.propaganda:hover { 
+    color: #32b42e;
+    font-size: 15pt;
+}
+.propaganda:active {
+    text-decoration: none
+}
+.proposta{
+    font-size: 12pt;
+    font-family: serif;
+    
+}
+.proposta a{
+    color: #32b42e;
+}
+form, table{
+    font-size: 10pt;
+    
+}
+.aluno td{
+        border: solid 1px #32b42e;
+    border-top-style: none;
+    
+}
+.aluno th{
+    font-size: 12pt;
+}
+/*p{
+    background: #32b42e;
+    color: #fff;
+    height: 20px;
+    border: solid 1px #32b42e;
+    border-radius: 1em 1em 1em 1em
+}*/
+select{
+    background: #fff;
+    color: #32b42e;
+    border: 1px solid #32b42e;
+    border-radius: 1em 1em 1em 1em;
+}
+select{
+    outline: none;
+}
+.corpoCad{
+    background-color: #e2e2e2;
+    font-family: serif;
+    font-size: 13pt;
+    font-weight:100;
+    color: #000;
+    background-image: url(../images/fundo.jpeg);
+}
+.cad{
+    margin-top: 1%;
+    background: #fff;
+    width: 95%; 
+   font-size: 15pt;
+    border: 5px solid #abe3aa;
+      box-shadow: 1px 7px 7px #333;
+      color: #000;
+      font-weight: 500;
+}
+.cad input{
+    color: #32b42e;
+   font-size: 15pt;
+}
+.fotCad{
+    margin: 3%;
+    background: #32b42e;
+    border: 1px solid #32b42e;
+    border-radius: 1em 1em 1em 1em;
+}
+.fotCad a:hover{
+    color: #fff;
+    letter-spacing: 1px;
+}
+.alter:hover{
+    text-decoration: underline;
+}
+    .env:hover{
+    color: #32b42e;
+    box-shadow: black 0.5em 0.5em 0.3em
+}
+.alunoAp td{
+    border: 1px solid #32b42e;
+    font-size: 11pt;
+    border-top-style: none;
+    border-right-style: none;
+}
+.alunoAp a{
+    color: #32b42e;
+}
+.alunoAp th{
+    width: 100%;
+}

@@ -1,0 +1,97 @@
+<?php
+
+include_once '/opt/lampp/htdocs/greensys/transfer/PontosDeColetaDTO.php';
+require_once 'conexao/conexao.php';
+
+/*
+  PONTOSDECOLETADAO CONTÉM OS MÉTODOS DA APLICAÇÃO */
+
+/**
+ * Description of pontosDeColetaDAO
+ *
+ * @author diogenes
+ */
+class PontosDeColetaDAO {
+
+    public $pdo = null;
+
+    public function __construct() {
+        $this->pdo = Conexao::obterConexao();
+    }
+
+    public function cadastrarPtCol(PontosDeColetaDTO $dados) {
+
+        $l = $dados->getLocal();
+        $e = $dados->getEstado();
+        $c = $dados->getCidade();
+        $tel = $dados->getTelefone();
+        $tip = $dados->getTipoRes();
+        $n = $dados->getNome();
+        $sql = "INSERT INTO pontosColeta VALUES ('','$l','$e','$c','$tel','$tip','$n' )";
+        $consulta = $this->pdo->prepare($sql);
+        $consulta->execute();
+    }
+
+    public function buscarPtCol() {
+        //JOGAR FUNÇÃO PRO ADMIN
+        $sql = " SELECT pontosColeta.local, pontosColeta.estado, tb_cidades.nomecidade, pontosColeta.telefone, pontosColeta.tipoRes,
+          pontosColeta.nomeEstab
+FROM pontosColeta
+JOIN tb_cidades
+ON ( pontosColeta.cidade = tb_cidades.id ) ";
+        $consulta = $this->pdo->prepare($sql);
+        $consulta->execute();
+        $resutado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        return $resutado;
+    }
+
+    public function buscarPtColAvancado($param) {
+        //all não
+        $sql = " SELECT * FROM pontosColeta
+JOIN contato
+JOIN usuario
+JOIN residuos
+ON(
+    usuario.id=contato.id_usr
+    AND contato.estado=pontosColeta.estado
+    AND contato.cidade=pontosColeta.cidade
+    AND usuario.id=";
+        $consulta = $this->pdo->prepare($sql);
+        $consulta->execute();
+        $resutado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        return $resutado;
+    }
+
+    public function BuscaComParam($tpesq, $pesquisa) {
+        $sql = " SELECT pontosColeta.local, pontosColeta.estado, tb_cidades.nomecidade, pontosColeta.telefone, pontosColeta.tipoRes,
+          pontosColeta.nomeEstab
+FROM pontosColeta
+JOIN tb_cidades
+//JOIN tb_estados
+ON ( pontosColeta.cidade = tb_cidades.id ) ";
+        //nome, estado, tresiduo criar busca por cidades
+        switch ($tpesq) {
+            case "nome":
+$sql=$sql."AND pontosColeta.nomeEstab like '%{$pesquisa}%' ";
+
+                break;
+            case "estado":
+$sql=$sql."";
+/*
+SELECT pontosColeta.NomeEstab
+FROM pontosColeta
+JOIN tb_estados
+ON(
+tb_estados.uf=pontosColeta.estado
+)
+AND tb_estados.nome='GOIAS';
+  */
+                break;
+            case "tresiduo":
+$sql=$sql."";
+//AND pontosColeta.tipoRes like '%{$pesquisa}%'
+                break;
+        }
+    }
+
+}

@@ -1,0 +1,48 @@
+**********************************************
+*PROJETO GREENSYS			     *
+**********************************************
+
+fUNÇOES
+______________________________________________________________________________________
+funções do usuário{
+------------------------------------------------
+#funções de alteraçao de dados do usuário#
+------------------------------------------------
+	*alterar dados->altera dados básicos do usuário
+	*configurações avançadas->altera dados de forma singular
+		estado
+		senha
+		tipo de usuario
+------------------------------------------------
+#funções de cadastros do usuário#
+------------------------------------------------
+	*cadastrar usuário
+	*cadastrar pontos de coleta
+	*cadastrar resíduos
+------------------------------------------------
+#funções sobre fórun#
+------------------------------------------------
+	*criar fórun
+	*fóruns
+	*todos os fóruns
+------------------------------------------------
+#Funções sobre artigos#
+------------------------------------------------
+	*escrever artigos
+	*listar artigos
+------------------------------------------------
+#funções sobre pontos de coleta#
+------------------------------------------------
+	*cadastrar pontos de coleta
+	*listar pontos de coleta
+	*listar pontos de coleta avançado
+------------------------------------------------
+#funções sobre residuos#
+------------------------------------------------
+	*cadastrar residuos
+	*procurar colaboradores
+-----------------------------------------------
+_____________________________________________________________________________
+
+
+}

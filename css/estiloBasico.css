@@ -1,0 +1,246 @@
+/*
+CSS BÁSICO DO SISTEMA
+*/
+/* 
+    Created on : 18/05/2014, 20:20:55
+    Author     : diogenes
+*/
+/*MENU*/
+
+/* LINKS*/
+a{
+     margin: 0px;
+     padding: 0px;
+     text-decoration: none;     
+}
+a:link, a:visited {
+	text-decoration: none;
+        color: #000;
+        font-weight:100;
+	}
+a:hover { 
+    
+	color: #32b42e;
+	}
+a:active {
+	text-decoration: none
+	}
+        a{
+            outline: none;
+        }
+/*MAGEM E PREENCHIMENTO 0*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*CORPO DA PÁGINA*/
+body{
+
+    background-color: #e2e2e2;
+    font-family: serif;
+    font-size: 13pt;
+    font-weight:100;
+    color:#000;
+    background-image: url(../images/fundo.jpeg);
+}
+/*CABEÇALHO */
+header{
+    background-color: #ffffff;
+    padding: 7%;
+    background-image: url(../images/GS-06.png);
+    background-repeat: no-repeat;
+      box-shadow: 1px 7px 7px #333;
+      
+}
+.usr{
+    position: absolute;
+    top: 3%;
+    left: 79%;
+    width: 20%;
+    font-size: 13pt;
+    color: #32b42e;
+}
+.menuUsr{
+    border: solid 1px #CCC;
+    background: #32b42e;
+    border-radius: 1em 0em 1em 0em;
+}
+.menuUsr a{
+    position: relative;
+    font-size: 9pt;
+    left: 40%;
+    color: #fff;
+}
+.menuUsr a:hover{
+    color: #000;
+}
+nav{
+    position: absolute;
+    top: 29%;
+    left: 1%;
+    border: 1px solid #32b42e;
+    width: 20%;
+    height: 400px;
+    background:#fff;
+    color:#000;
+    font-weight:100;
+    box-shadow:2px 2px 3px #000;
+    -moz-transition:0.8s ease-in-out;
+    -webkit-transition:all 0.8s ease-in-out;
+    -moz-transition:0.8s ease-in-out;
+    -o-transition:0.2s ease-in-out;
+    -webkit-transition:all 0.8s ease-in-out;
+    text-shadow:0px 0px 15px #fff;
+    border-radius: 0em 5em 0em 5em;
+    height: 600px;
+    font-size: 11pt;
+}
+
+nav ul li{
+    list-style: none;
+    
+   
+}
+
+
+
+iframe{
+    width: 55%;
+    position: absolute;
+    top: 29%;
+    left: 22%;
+    background-color: #fff;
+    border: solid 1px #CCC;
+    border-radius: 3em 3em 1em 1em;
+    box-shadow: 1px 7px 7px #333;
+
+}
+aside{
+    width: 20%;
+    position: absolute;
+    top: 29%;
+    left: 79%;
+    border: 1px solid #32b42e;
+    height: 400px;
+    background:#fff;
+    color:#000;
+    font-weight:100;
+    box-shadow:2px 2px 3px #000;
+    -moz-transition:0.8s ease-in-out;
+    -webkit-transition:all 0.8s ease-in-out;
+    border-radius: 5em 0em 5em 0em;
+    height: 600px;
+    font-size: 11pt;
+
+}
+footer{
+    position: absolute;
+    top: 880px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #32b42e;
+    border-radius: 5em 5em 0em 0em;
+    background-color: #fff;
+    box-shadow: 1px 1px 7px #333;
+}
+footer p{
+    position: relative;
+    top: 57%;
+    left: 3%;
+    width: 28%;
+    padding-right:  3%;
+    padding-left: 3%;
+    border: 1px solid #000;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-color: #32b42e;
+    border-right-style: double;
+}
+footer a{
+    position: relative;
+    top: 35%;
+    left: 40%;
+    width: 25%;
+    padding-right:  3%;
+    padding-left: 3%;
+    border: 1px solid #000;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-color: #32b42e;
+    border-right-style: double;
+}
+
+footer span{
+    color: #fd6054;
+}
+aside p, .menu p{
+    background: #32b42e;
+    font-size: 15pt;
+    color: #fff;
+    border-radius: 2em 2em 2em 2em;
+    position: relative;
+    top: 1px
+    
+}
+aside .us, .menu ul{
+    border: solid 2px #32b42e;
+    border-top-style:none;
+    border-radius: 2em 2em 2em 2em;
+    
+}
+aside div{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+}
+.menu, div {
+    position: relative;
+    top: 15%;
+    left: 1%;
+    width: 97%;
+}
+.apresentacao {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    border: solid 3px #fff;
+    border-radius:  1em 1em 1em 1em;
+    box-shadow: -3px 1px 7px 1px #000; 
+    
+}
+.apresentacao p:first-letter{
+    font-size: 33pt;
+    margin-left: 2%;
+}
+.apresentacao p{
+    font-weight: 100;
+    border-radius:  0em 0em 0em 0em;
+}
+.apresentacao h3{
+    font-size: 24pt;
+    
+}
+.apresentacao hr{
+    color: #32b42e;
+}
+.Ap{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #fff;
+    border-radius: 0em 0em 0em 7em;
+    background: #32b42e;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    height: 50px;
+}
+.Ap a{
+    position: relative;
+    top: 15%;
+}
+.Ap a:hover{
+    color: #fff;
+}

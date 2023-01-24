@@ -1,0 +1,93 @@
+/*LAYOUT DA TELA DE LOGIN DO SISTEMA*/
+/* 
+    Created on : 25/05/2014, 17:03:16
+    Author     : diogenes
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    
+    background-color: #e2e2e2;
+    font-family: serif;
+    font-size: 13pt;
+    font-weight:100;
+    color: #000;
+}
+header{
+    background-color: #ffffff;
+    padding: 7%;
+    background-image: url(../images/GS-06.png);
+    background-repeat: no-repeat;
+}
+article{
+    border: 5px solid #abe3aa;
+    height: 450px;
+   background-image: url(../images/fundo.jpeg);
+}
+.form{
+    width: 40%;
+    border: 5px solid #abe3aa;
+    position: relative;
+    top: 0%;
+    left: 54%;
+    height: 445px;
+    background-color: #ffffff;
+    
+    
+}
+.form form{
+    padding-top: 15%;
+    color: #32b42e;
+}
+.forulario{
+    width: 60%;
+    font-size: 19pt;
+    color: #32b42e;
+}
+.enviar{
+    width: 50%;
+    position: relative;
+    top: 8px;
+    height:24pt;
+    
+}
+.enviar:hover{
+    color: #32b42e;
+    box-shadow: black 0.5em 0.5em 0.3em
+}
+.senha{
+    position: relative;
+    top:80px;
+    left: 43%;
+    font-size: 12x;
+}
+
+.conheca{
+    width: 53%;
+    font-size: 70px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70%;
+    border-radius: 1em 0em 1em 0em; 
+}
+.conheca a{
+    position: relative;
+    left: 5%;
+}
+a:link, a:visited {
+	text-decoration: none;
+        color: #000;
+        font-weight:100;
+	}
+a:hover { 
+	color: #32b42e
+	}
+a:active {
+	text-decoration: none
+	}
+        a{
+            outline: none;
+        }

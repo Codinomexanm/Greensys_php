@@ -1,0 +1,220 @@
+<?php
+require_once '../../acess/usuarioDAO.php';
+
+?>
+<!DOCTYPE html>
+<html>
+<!--    página de cadastro do usuário-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Grensys-Cadastro de Usuário</title>
+        <style type="text/css">
+            #pf{
+                display:none;
+                
+            }
+            #pj{
+                display:none;
+                
+            }
+        </style>
+    </head>
+    <body>
+<!--        chama a livravia jquery-->
+        <script src="../../js/jquery.js" ></script>
+        <script src="../../js/jquery.maskedinput-1.1.4.pack.js"></script>
+        
+        
+<!--        script para exibir os dados em selectbox nos campos estado e cidades-->
+        <script>
+            function buscar_cidades() {
+                var estado = $('#estado').val();
+                if (estado) {
+                    var url = '../../controler/usr/buscar_cidades.php?estado=' + estado;
+                    $.get(url, function(dataReturn) {
+                        $('#load_cidades').html(dataReturn);
+                    });
+                }
+            }
+            
+            function pessoa(tipoUsr){
+         switch(tipoUsr){
+    case 'fisica':
+        
+                 document.getElementById("pf").style.display="inline";
+                 document.getElementById("pj").style.display="none";
+                break;
+            case 'juridica':
+                document.getElementById("pj").style.display="inline";
+                 document.getElementById("pf").style.display="none";
+            }     
+            
+            }
+          $(document).ready(function(){$("#cnpj").mask("99.999.999/9999-99");});
+            
+        </script>
+<!--        cabeçalho-->
+        <header>
+            <h1>Greensys</h1>
+            
+        </header>
+        <div align='center'>
+            <form name='formCadastro' id='cadastro' action="../../controler/usr/controlerCadastro.php" method="post">
+                <table>
+                    <tr>
+                        <td>Nome:</td>
+                        <td><input type="text" name="nome" id="nomeUsuario" maxlength="50"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Tipo de Pessoa:
+                        </td>
+                        <td>
+                            <input type="radio" name="tipoUsr" value="fisica" onclick="pessoa(this.value);maskCpf(this.value);">Pessoa física
+
+                            <input type="radio" name="tipoUsr" value="juridica" onclick="pessoa(this.value);" >Pessoa jurídica
+                        </td>
+                    </tr>
+                </table>
+                <table id="pf">
+                    <tr>
+                        <td>
+                            CPF:
+                        </td>
+                        <td>
+                            
+                            <input type="text" name="cpf" id="cpf" maxlength="14">
+                        </td>
+                    </tr>
+
+                    <td> Sexo:</td>
+
+                    <td>
+                        <select name="sexo"  id="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Data de nascimento:</td>
+                        <td> <input type='date'name="data" id="dataNasc"maxlength="10"></td>
+
+                    </tr>
+                    </table>
+                    <table id="pj">
+                    <tr>
+                        <td>
+                            CNPJ:
+                        </td>
+                        <td>
+                            <input type="text" name="cnpj" id="cnpj" maxlength="18">
+                        </td>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <td>
+                            Login:
+                        </td>
+                        <td>
+                            <input type="text" name="login" id="loginCad">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Senha: 
+                        </td>
+                        <td>
+                            <input type="password" name="senha" id="senhaCad">
+                        </td>
+                    </tr>
+
+                </table>
+                <hr>
+
+                <table>
+                    <tr>
+                        <td>
+                            Email:   
+                        </td>
+                        <td>
+                            <input type="email" name="email1"id="email1">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Email:   
+                        </td>
+                        <td>
+                            <input type="email" name="email2" id="email2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Telefone:   
+                        </td>
+                        <td>
+                            <input type="tel" name="telefone1"id="tel1" maxlength="14">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Telefone:   
+                        </td>
+                        <td>
+                            <input type="tel" name="telefone2"id="tel2" maxlength="14">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Estado:   
+                        </td>
+                        <td>
+                            <select  name="uf" id="estado" onchange="buscar_cidades()">
+                               <?php
+                                //fazer uma lista de opções buscadas do banco de dados para jogar opções aqui. 
+                                $listar = new UsuarioDAO();
+                                $lista = $listar->listarEstados();
+                                foreach ($lista as $op) {
+
+                                    echo"<option  value=" . $op['uf'] . ">" . $op['uf'] . "</option>";
+                                }
+                               ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cidade:   
+                        </td>
+<!--                        nessa td serão lançadas as opções(cidades) referentes a escolha do usuário
+                        obs: as opções estão salvas no script buscar_cidades-->
+                        <td id="load_cidades" >
+                            <select name="cidade">
+                                <option>escolha uma opção</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Endereço:   
+                        </td>
+                        <td>
+                            <input type="text" name="endereco" id="endereco">
+                        </td>
+                    </tr>
+
+                </table>
+                <hr> 
+                <input type="submit" value='cadastrar'id="cadastrar">
+            </form>
+        </div>
+
+    </body>
+</html>
